@@ -14,7 +14,6 @@ const YourSlide = () => {
       { title: "Slide 1", content: "LG CNS" },
       { title: "Slide 2", content: "VietNam Build Center" },
       { title: "Slide 3", content: "Training Fresher 2024" },
-      // Thêm các slide khác nếu cần
     ];
     dispatch(setSlides(slidesData));
   }, [dispatch]);
