@@ -1,17 +1,22 @@
 import { Button } from "antd";
 import React from "react";
 import {
-    Link
+    Link, useLocation
 } from "react-router-dom";
 
 const NavBar = () => {
+
+  const location = useLocation();
+  const homePath = (location.pathname === "/")
+
+
     return (
       <nav className="p-4">
         <Link to="/" className="mr-4">
-          <Button>Home</Button>
+          <Button className={homePath && "border-blue-500"}>Home</Button>
         </Link>
         <Link to="/about">
-          <Button>About</Button>
+          <Button className={!!!homePath && "border-blue-500"}>About</Button>
         </Link>
       </nav>
     );
